@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_scenarios_id: 
+  second_scenarios_id: 
+  third_scenarios_id: 
+  fourth_scenarios_id: 1
+
+two:
+  first_scenarios_id: 
+  second_scenarios_id: 
+  third_scenarios_id: 
+  fourth_scenarios_id: 1

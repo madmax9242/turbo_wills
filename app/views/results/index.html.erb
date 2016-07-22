@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First scenarios</th>
+      <th>Second scenarios</th>
+      <th>Third scenarios</th>
+      <th>Fourth scenarios</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result.first_scenarios_id %></td>
+        <td><%= result.second_scenarios_id %></td>
+        <td><%= result.third_scenarios_id %></td>
+        <td><%= result.fourth_scenarios_id %></td>
+        <td><%= link_to 'Show', result %></td>
+        <td><%= link_to 'Edit', edit_result_path(result) %></td>
+        <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Result', new_result_path %>

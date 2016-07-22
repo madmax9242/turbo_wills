@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fourth Scenarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ami cc only</th>
+      <th>String,</th>
+      <th>Ami cc plus</th>
+      <th>String,</th>
+      <th>Ami reg med</th>
+      <th>String,</th>
+      <th>Ami invasive</th>
+      <th>String,</th>
+      <th>Ami respirator</th>
+      <th>String,</th>
+      <th>Ami dialysis</th>
+      <th>String,</th>
+      <th>Ami cpr</th>
+      <th>String,</th>
+      <th>Bi cc only</th>
+      <th>String,</th>
+      <th>Bi cc plus</th>
+      <th>String,</th>
+      <th>Bi reg med</th>
+      <th>String,</th>
+      <th>Bi invasive</th>
+      <th>String,</th>
+      <th>Bi respirator</th>
+      <th>String,</th>
+      <th>Bi dialysis</th>
+      <th>String,</th>
+      <th>Bi cpr</th>
+      <th>String</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fourth_scenarios.each do |fourth_scenario| %>
+      <tr>
+        <td><%= fourth_scenario.ami_cc_only %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.ami_cc_plus %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.ami_reg_med %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.ami_invasive %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.ami_respirator %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.ami_dialysis %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.ami_cpr %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.bi_cc_only %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.bi_cc_plus %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.bi_reg_med %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.bi_invasive %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.bi_respirator %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.bi_dialysis %></td>
+        <td><%= fourth_scenario.string, %></td>
+        <td><%= fourth_scenario.bi_cpr %></td>
+        <td><%= fourth_scenario.string %></td>
+        <td><%= link_to 'Show', fourth_scenario %></td>
+        <td><%= link_to 'Edit', edit_fourth_scenario_path(fourth_scenario) %></td>
+        <td><%= link_to 'Destroy', fourth_scenario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fourth scenario', new_fourth_scenario_path %>

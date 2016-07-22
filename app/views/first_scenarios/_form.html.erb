@@ -1,0 +1,129 @@
+<%= form_for(@first_scenario) do |f| %>
+  <% if @first_scenario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@first_scenario.errors.count, "error") %> prohibited this first_scenario from being saved:</h2>
+
+      <ul>
+      <% @first_scenario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ami_cc_only %><br>
+    <%= f.text_field :ami_cc_only %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :ami_cc_plus %><br>
+    <%= f.text_field :ami_cc_plus %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :ami_reg_med %><br>
+    <%= f.text_field :ami_reg_med %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :ami_invasive %><br>
+    <%= f.text_field :ami_invasive %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :ami_respirator %><br>
+    <%= f.text_field :ami_respirator %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :ami_dialysis %><br>
+    <%= f.text_field :ami_dialysis %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :ami_cpr %><br>
+    <%= f.text_field :ami_cpr %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :bi_cc_only %><br>
+    <%= f.text_field :bi_cc_only %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :bi_cc_plus %><br>
+    <%= f.text_field :bi_cc_plus %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :bi_reg_med %><br>
+    <%= f.text_field :bi_reg_med %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :bi_invasive %><br>
+    <%= f.text_field :bi_invasive %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :bi_respirator %><br>
+    <%= f.text_field :bi_respirator %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :bi_dialysis %><br>
+    <%= f.text_field :bi_dialysis %>
+  </div>
+  <div class="field">
+    <%= f.label :string, %><br>
+    <%= f.text_field :string, %>
+  </div>
+  <div class="field">
+    <%= f.label :bi_cpr %><br>
+    <%= f.text_field :bi_cpr %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

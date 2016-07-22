@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ami_cc_only: MyString
+  string,: MyString
+  ami_cc_plus: MyString
+  string,: MyString
+  ami_reg_med: MyString
+  string,: MyString
+  ami_invasive: MyString
+  string,: MyString
+  ami_respirator: MyString
+  string,: MyString
+  ami_dialysis: MyString
+  string,: MyString
+  ami_cpr: MyString
+  string,: MyString
+  bi_cc_only: MyString
+  string,: MyString
+  bi_cc_plus: MyString
+  string,: MyString
+  bi_reg_med: MyString
+  string,: MyString
+  bi_invasive: MyString
+  string,: MyString
+  bi_respirator: MyString
+  string,: MyString
+  bi_dialysis: MyString
+  string,: MyString
+  bi_cpr: MyString
+  string: MyString
+
+two:
+  ami_cc_only: MyString
+  string,: MyString
+  ami_cc_plus: MyString
+  string,: MyString
+  ami_reg_med: MyString
+  string,: MyString
+  ami_invasive: MyString
+  string,: MyString
+  ami_respirator: MyString
+  string,: MyString
+  ami_dialysis: MyString
+  string,: MyString
+  ami_cpr: MyString
+  string,: MyString
+  bi_cc_only: MyString
+  string,: MyString
+  bi_cc_plus: MyString
+  string,: MyString
+  bi_reg_med: MyString
+  string,: MyString
+  bi_invasive: MyString
+  string,: MyString
+  bi_respirator: MyString
+  string,: MyString
+  bi_dialysis: MyString
+  string,: MyString
+  bi_cpr: MyString
+  string: MyString

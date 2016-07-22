@@ -1,0 +1,2 @@
+module ThirdScenariosHelper
+end
