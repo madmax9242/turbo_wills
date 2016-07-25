@@ -1,5 +1,6 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
 
   # GET /results
   # GET /results.json
@@ -10,6 +11,10 @@ class ResultsController < ApplicationController
   # GET /results/1
   # GET /results/1.json
   def show
+    @first_scenario = First_Scenario.where(user_id: current_user.id)
+    @second_scenario = Second_Scenario.where(user_id: current_user.id)
+    @third_scenario = Third_Scenario.where(user_id: current_user.id)
+    @fourth_scenario = Fourth_Scenario.where(user_id: current_user.id)
   end
 
   # GET /results/new
@@ -65,6 +70,10 @@ class ResultsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_result
       @result = Result.find(params[:id])
+    end
+
+    def set_user 
+      @user = current_user
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

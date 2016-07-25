@@ -1,5 +1,6 @@
 class ThirdScenariosController < ApplicationController
   before_action :set_third_scenario, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
 
   # GET /third_scenarios
   # GET /third_scenarios.json
@@ -65,6 +66,10 @@ class ThirdScenariosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_third_scenario
       @third_scenario = ThirdScenario.find(params[:id])
+    end
+
+    def set_user 
+      @user = current_user
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

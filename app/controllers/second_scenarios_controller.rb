@@ -1,5 +1,6 @@
 class SecondScenariosController < ApplicationController
   before_action :set_second_scenario, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
 
   # GET /second_scenarios
   # GET /second_scenarios.json
@@ -65,6 +66,10 @@ class SecondScenariosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_second_scenario
       @second_scenario = SecondScenario.find(params[:id])
+    end
+
+    def set_user 
+      @user = current_user
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

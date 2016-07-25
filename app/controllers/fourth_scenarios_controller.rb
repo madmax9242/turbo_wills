@@ -1,5 +1,6 @@
 class FourthScenariosController < ApplicationController
   before_action :set_fourth_scenario, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
 
   # GET /fourth_scenarios
   # GET /fourth_scenarios.json
@@ -65,6 +66,10 @@ class FourthScenariosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_fourth_scenario
       @fourth_scenario = FourthScenario.find(params[:id])
+    end
+
+    def set_user 
+      @user = current_user
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
