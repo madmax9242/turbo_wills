@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :user_sessions
 
   get 'home' => 'pages#home'
+  get 'quality' => 'pages#quality'
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
@@ -23,7 +24,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

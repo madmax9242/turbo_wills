@@ -16,13 +16,32 @@
 
 @import "bootstrap";
 
+.centered {
+	margin: 0 auto;
+	text-align: center;
+}
+
 .main_body {
-	background-color: #C22828;
-	color: #FCFAFA;
+	border-radius: 25px;
+	background-color: #E8E465;
+	color: #17202A;
+	box-shadow: 10px 14px 12px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 14px 12px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 14px 12px 0px rgba(0,0,0,0.75);
+	max-width: 70%;
+
 }
 
 .main_instructions {
 	p {
 		font-size: 16px;
 	}
+}
+
+.spacer-10 {
+	height: 10;
+}
+
+.spacer-20 {
+	height: 20px;
 }
