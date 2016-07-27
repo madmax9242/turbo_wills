@@ -11,10 +11,16 @@ class ResultsController < ApplicationController
   # GET /results/1
   # GET /results/1.json
   def show
-    @first_scenario = First_Scenario.where(user_id: current_user.id)
-    @second_scenario = Second_Scenario.where(user_id: current_user.id)
-    @third_scenario = Third_Scenario.where(user_id: current_user.id)
-    @fourth_scenario = Fourth_Scenario.where(user_id: current_user.id)
+    @first_scenario = FirstScenario.where(user_id: current_user.id)
+    @second_scenario = SecondScenario.where(user_id: current_user.id)
+    @third_scenario = ThirdScenario.where(user_id: current_user.id)
+    @fourth_scenario = FourthScenario.where(user_id: current_user.id)
+
+    # @result.first_scenario_id = @first_scenario.id
+    # @result.second_scenario_id = @second_scenario.id
+    # @result.third_scenario_id = @third_scenario.id
+    # @result.fourth_scenario = @fourth_scenario.id
+
   end
 
   # GET /results/new
@@ -78,6 +84,6 @@ class ResultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def result_params
-      params.require(:result).permit(:first_scenarios_id, :second_scenarios_id, :third_scenarios_id, :fourth_scenarios_id)
+      params.require(:result).permit(:first_scenario_id, :second_scenario_id, :third_scenario_id, :fourth_scenario_id)
     end
 end

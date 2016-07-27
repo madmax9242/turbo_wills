@@ -26,10 +26,17 @@ class ThirdScenariosController < ApplicationController
   # POST /third_scenarios.json
   def create
     @third_scenario = ThirdScenario.new(third_scenario_params)
+    @third_scenario.user_id = current_user.id
 
     respond_to do |format|
       if @third_scenario.save
-        format.html { redirect_to @third_scenario, notice: 'Third scenario was successfully created.' }
+
+        @result = Result.where(user_id: current_user.id)
+        p @result
+        # @result.third_scenario_id = @third_scenario.id
+        # @result.save
+
+        format.html { redirect_to new_fourth_scenario_path, notice: 'Third scenario was successfully created.' }
         format.json { render :show, status: :created, location: @third_scenario }
       else
         format.html { render :new }
@@ -74,6 +81,6 @@ class ThirdScenariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def third_scenario_params
-      params.require(:third_scenario).permit(:ami_cc_only, :ami_cc_plus, :ami_reg_med, :ami_invasive, :ami_respirator, :ami_dialysis, :ami_cpr, :bi_cc_only, :bi_cc_plus, :bi_reg_med, :bi_invasive, :bi_respirator, :bi_dialysis, :bi_cpr, :string)
+      params.require(:third_scenario).permit(:ami_cc_only, :ami_cc_plus, :ami_reg_med, :ami_invasive, :ami_respirator, :ami_dialysis, :ami_cpr, :bi_cc_only, :bi_cc_plus, :bi_reg_med, :bi_invasive, :bi_respirator, :bi_dialysis, :bi_cpr)
     end
 end

@@ -27,10 +27,17 @@ class FirstScenariosController < ApplicationController
   # POST /first_scenarios.json
   def create
     @first_scenario = FirstScenario.new(first_scenario_params)
+    @first_scenario.user_id = current_user.id
 
     respond_to do |format|
       if @first_scenario.save
-        format.html { redirect_to @first_scenario, notice: 'First scenario was successfully created.' }
+
+        @result = Result.where(user_id: current_user.id)
+        p @result
+        # @result.first_scenario_id = @first_scenario.id
+        # @result.save
+
+        format.html { redirect_to new_second_scenario_path, notice: 'First scenario was successfully created.' }
         format.json { render :show, status: :created, location: @first_scenario }
       else
         format.html { render :new }
@@ -75,6 +82,6 @@ class FirstScenariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def first_scenario_params
-      params.require(:first_scenario).permit(:ami_cc_only, :ami_cc_plus, :ami_reg_med, :ami_invasive, :ami_respirator, :ami_dialysis, :ami_cpr, :bi_cc_only, :bi_cc_plus, :bi_reg_med, :bi_invasive, :bi_respirator, :bi_dialysis, :bi_cpr, :string)
+      params.require(:first_scenario).permit(:ami_cc_only, :ami_cc_plus, :ami_reg_med, :ami_invasive, :ami_respirator, :ami_dialysis, :ami_cpr, :bi_cc_only, :bi_cc_plus, :bi_reg_med, :bi_invasive, :bi_respirator, :bi_dialysis, :bi_cpr)
     end
 end
