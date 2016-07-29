@@ -34,8 +34,13 @@
 
 .main_instructions {
 	p {
-		font-size: 16px;
+		font-size: 18px;
 	}
+}
+
+.scenario_description {
+	font-weight: bold;
+	font-size: 16;
 }
 
 .spacer-10 {
@@ -44,4 +49,8 @@
 
 .spacer-20 {
 	height: 20px;
+}
+
+.spacer-50 {
+	height: 50px;
 }
