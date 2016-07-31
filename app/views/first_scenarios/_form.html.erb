@@ -11,73 +11,69 @@
     </div>
   <% end %>
 
+  <p><h3><strong>1. My quality of health is similar to what it is now. i.e. I have no end-stage medical conditions and my mental faculties are intact. I am able to care for myself.</strong></h3></p>
+
+  <p class="scenario_description">If I develop an acute medical illness that may be treated, and my doctors think I have a reasonable chance of surviving the illness and leaving the hospital, I wish the following: (Check any that apply:</p>
+
   <div class="field">
-    <%= f.label :ami_cc_only %><br>
-    <%= f.check_box :ami_cc_only %>
+    <%= f.check_box :ami_cc_only %>Comfort Care Only <br>
   </div>
   <div class="field">
-    <%= f.label :ami_cc_plus %><br>
-    <%= f.check_box :ami_cc_plus %>
+    <%= f.check_box :ami_cc_plus %> Comfort Care, to include intravenous fluids and tube feedings <br>
   </div>
   <div class="field">
-    <%= f.label :ami_reg_med %><br>
-    <%= f.check_box :ami_reg_med %>
+    <%= f.check_box :ami_reg_med %>Regular Medical Care <br>
   </div>
   <div class="field">
-    <%= f.label :ami_invasive %><br>
-    <%= f.check_box :ami_invasive %>
+    <%= f.check_box :ami_invasive %>Invasive procedures like surgery or heart catheterizations <br>
   </div>
   <div class="field">
-    <%= f.label :ami_respirator %><br>
-    <%= f.check_box :ami_respirator %>
+    <%= f.check_box :ami_respirator %>Temporary support from a respirator <br>
   </div>
 
   <div class="field">
-    <%= f.label :ami_dialysis %><br>
-    <%= f.check_box :ami_dialysis %>
+    <%= f.check_box :ami_dialysis %>Temporary support <br>
   </div>
 
   <div class="field">
-    <%= f.label :ami_cpr %><br>
-    <%= f.check_box :ami_cpr %>
+    <%= f.check_box :ami_cpr %>CPR if my heart stops <br>
+  </div>
+
+  <br>
+
+  <p class="scenario_description">If I suffer some form of brain injury (stroke, bleeding, cardiac arrest, etc.) that makes it unlikely I’ll ever regain the ability to make decisions for myself, I wish the following: (Check any that apply):</p>
+
+  <div class="field">
+    <%= f.check_box :bi_cc_only %>Comfort care only <br>
   </div>
 
   <div class="field">
-    <%= f.label :bi_cc_only %><br>
-    <%= f.check_box :bi_cc_only %>
+    <%= f.check_box :bi_cc_plus %>Comfort care, to include intravenous fluids and tube feedings <br>
   </div>
 
   <div class="field">
-    <%= f.label :bi_cc_plus %><br>
-    <%= f.check_box :bi_cc_plus %>
+    <%= f.check_box :bi_reg_med %>Regular medical care <br>
   </div>
 
   <div class="field">
-    <%= f.label :bi_reg_med %><br>
-    <%= f.check_box :bi_reg_med %>
+    <%= f.check_box :bi_invasive %>Invasive procedures like surgery or heart catheterizations <br>
   </div>
 
   <div class="field">
-    <%= f.label :bi_invasive %><br>
-    <%= f.check_box :bi_invasive %>
+    <%= f.check_box :bi_respirator %>Temporary support from a respirator <br>
   </div>
 
   <div class="field">
-    <%= f.label :bi_respirator %><br>
-    <%= f.check_box :bi_respirator %>
+    <%= f.check_box :bi_dialysis %>Temporary support <br>
   </div>
 
   <div class="field">
-    <%= f.label :bi_dialysis %><br>
-    <%= f.check_box :bi_dialysis %>
+    <%= f.check_box :bi_cpr %>CPR if my heart stops <br>
   </div>
 
-  <div class="field">
-    <%= f.label :bi_cpr %><br>
-    <%= f.check_box :bi_cpr %>
-  </div>
+  <br>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success"%>
   </div>
 <% end %>
