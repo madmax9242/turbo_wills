@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'home' => 'pages#home'
   get 'quality' => 'pages#quality'
+  get 'ending' => 'pages#ending'
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout

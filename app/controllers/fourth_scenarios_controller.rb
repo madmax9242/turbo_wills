@@ -40,7 +40,7 @@ class FourthScenariosController < ApplicationController
         # @result.fourth_scenario_id = @fourth_scenario.id
         # @result.save
 
-        format.html { redirect_to @result, notice: 'Fourth scenario was successfully created.' }
+        format.html { redirect_to '/ending', notice: 'Fourth scenario was successfully created.' }
         format.json { render :show, status: :created, location: @fourth_scenario }
       else
         format.html { render :new }
