@@ -16,6 +16,15 @@
 
 @import "bootstrap";
 
+.btn-large {
+    padding: 8px 12px;
+    font-size: 22px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
 .centered {
 	margin: 0 auto;
 	text-align: center;
