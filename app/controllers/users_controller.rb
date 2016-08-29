@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
         # @result = Result.create(user_id: current_user.id)
 
-        format.html { redirect_to new_first_scenario_path, notice: 'User was successfully created.' }
+        format.html { redirect_to edit_user_path(@user), notice: 'User was successfully created.' }
         #format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to new_first_scenario_path, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -64,6 +64,21 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+
+    def quality_of_life
+      @user = User.find(params[:id])
+
+      respond_to do |format|
+        if @user.update(user_params)
+          format.html { redirect_to new_first_scenario_path }
+          format.json { render :show, status: :ok, location: @user }
+        else
+          format.html { render :edit }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+
   end
 
   private
@@ -74,6 +89,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation, :quality_of_life)
     end
 end

@@ -14,8 +14,11 @@ Rails.application.routes.draw do
   resources :user_sessions
 
   get 'home' => 'pages#home'
+  get 'pages/more_info' => 'pages#more_info'
   get 'quality' => 'pages#quality'
   get 'ending' => 'pages#ending'
+  get 'pages/treatments' => 'pages#treatments'
+
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout

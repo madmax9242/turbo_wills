@@ -12,22 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_scenario_id %><br>
-    <%= @result.first_scenario_id %>
+    Do you have a MPOA? <br>
+    <%= f.radio_button :mpoa, 'yes' %>Yes<br>
+    <%= f.radio_button :mpoa, 'no' %>No<br>
   </div>
+  
+  <div class="spacer-10"></div>
+
   <div class="field">
-    <%= f.label :second_scenario_id %><br>
-    <%= f.text_field :second_scenario_id %>
+    Who is your MPOA?
+    <%= f.text_field :mpoa_name %>
   </div>
+
+  <div class="spacer-10"></div>
+
   <div class="field">
-    <%= f.label :third_scenario_id %><br>
-    <%= f.text_field :third_scenario_id %>
+    Did you review this living will with your MPOA?<br>
+    <%= f.radio_button :review_with_mpoa, 'yes' %>Yes<br>
+    <%= f.radio_button :review_with_mpoa, 'no' %>No<br>
   </div>
+
+  <div class="spacer-10"></div>
+
   <div class="field">
-    <%= f.label :fourth_scenario_id %><br>
-    <%= f.number_field :fourth_scenario_id %>
+    Do you have any other specific requests not listed above?  If so, please write them below. <br>
+    <%= f.text_area :comments %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="spacer-10"></div>
+  <div class="actions centered">
+    <%= submit_tag "Continue", class: "btn btn-large btn-success" %>
   </div>
+
+  <div class="spacer-20"></div>
 <% end %>
