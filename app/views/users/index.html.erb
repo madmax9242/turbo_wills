@@ -1,27 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="error_page">
+  <div class="spacer-50"></div>
 
-<h1>Listing Users</h1>
+  <h1 class="centered">Permission Denied</h1>
+  <div class="spacer-20"></div>
+  <div class="centered">
+  	<img class="" src=<%= image_url('you_shall_not_pass.jpg') %> alt="404 image">
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+  <div class="spacer-20"></div>
+</div>  
