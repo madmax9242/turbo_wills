@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   resources :user_sessions
 
   get 'home' => 'pages#home'
-  get 'more_info' => 'pages#more_info'
+  get 'pages/more_info' => 'pages#more_info'
   get 'quality' => 'pages#quality'
   get 'ending' => 'pages#ending'
-  get 'treatments' => 'pages#treatments'
+  get 'pages/treatments' => 'pages#treatments'
 
 
   get 'login' => 'user_sessions#new', :as => :login

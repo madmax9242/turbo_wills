@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <p><h3><strong>Quality of Life</strong></h3></p>
+  <p class="centered"><h3><strong>Quality of Life</strong></h3></p>
 
   <p class="scenario-description"><strong>Why is this important?</strong>  It is not unusual for several years to have passed from the time a person filled out their living will and when it is first needed to help decide how to treat them medically.  Sometimes a person’s quality of life may have changed significantly over that time.  If their quality of life has gotten significantly worse they may now not want to be treated as aggressively as they indicated in their living will.</p>
 
@@ -25,10 +25,9 @@
     <%= f.radio_button :quality_of_life, 'unacceptable' %><strong>Unacceptable:</strong>  Most days I can’t do anything that is important to me or gives me joy.
   </div>
   <br />
-  <div class="actions">
-    <%= submit_tag "Continue", class: "btn btn-success" %>
+  <div class="actions centered">
+    <%= submit_tag "Continue", class: "btn btn-large btn-success" %>
   </div>
-<% end %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+  <div class="spacer-20"></div>
+<% end %>

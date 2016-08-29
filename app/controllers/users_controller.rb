@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
         # @result = Result.create(user_id: current_user.id)
 
-        format.html { redirect_to edit_user_path, notice: 'User was successfully created.' }
+        format.html { redirect_to edit_user_path(@user), notice: 'User was successfully created.' }
         #format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
