@@ -26,12 +26,12 @@ class FourthScenariosController < ApplicationController
   # POST /fourth_scenarios.json
   def create
     @fourth_scenario = FourthScenario.new(fourth_scenario_params)
-    @fourth_scenario.user_id = current_user.id
+    #@fourth_scenario.user_id = current_user.id
 
     respond_to do |format|
       if @fourth_scenario.save
 
-        @result = Result.create(first_scenario_id: @fourth_scenario.id, second_scenario_id: @fourth_scenario.id, third_scenario_id: @fourth_scenario.id, fourth_scenario_id: @fourth_scenario.id, user_id: current_user.id)
+        @result = Result.create(first_scenario_id: @fourth_scenario.id, second_scenario_id: @fourth_scenario.id, third_scenario_id: @fourth_scenario.id, fourth_scenario_id: @fourth_scenario.id, user_id: 1)
 
         @result.save
 
@@ -75,7 +75,11 @@ class FourthScenariosController < ApplicationController
     end
 
     def set_user 
-      @user = current_user
+      if current_user 
+        @user = current_user
+      else
+        @user = User.new
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

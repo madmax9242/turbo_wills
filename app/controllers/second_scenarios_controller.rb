@@ -26,13 +26,12 @@ class SecondScenariosController < ApplicationController
   # POST /second_scenarios.json
   def create
     @second_scenario = SecondScenario.new(second_scenario_params)
-    @second_scenario.user_id = current_user.id
+    #@second_scenario.user_id = current_user.id
 
     respond_to do |format|
       if @second_scenario.save
 
-        @result = Result.where(user_id: current_user.id)
-        p @result
+        #@result = Result.where(user_id: current_user.id)
         # @result.second_scenario_id = @second_scenario.id
         # @result.save
 
@@ -76,7 +75,11 @@ class SecondScenariosController < ApplicationController
     end
 
     def set_user 
-      @user = current_user
+      if current_user 
+        @user = current_user
+      else
+        @user = User.new
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
