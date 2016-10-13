@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :first_scenarios
   resources :user_sessions
 
-  get 'home' => 'pages#home'
+  get 'pages/home' => 'pages#home'
   get 'pages/more_info' => 'pages#more_info'
   get 'quality' => 'pages#quality'
   get 'ending' => 'pages#ending'
