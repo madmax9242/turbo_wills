@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'quality' => 'pages#quality'
   get 'ending' => 'pages#ending'
   get 'pages/treatments' => 'pages#treatments'
+  get 'pages/introduction' => 'pages#introduction'
 
 
   get 'login' => 'user_sessions#new', :as => :login
@@ -28,7 +29,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#home'
+  root 'pages#introduction'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
