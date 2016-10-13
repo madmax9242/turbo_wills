@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
+    <p class="font-18"><strong>First and Last Name</strong></p>
+    <%= f.text_field :name %>
+  </div><br />
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
+    <p class="font-18"><strong>Date Completed</strong></p>
+    <%= f.date_field :date_completed %>
+  </div><br />
   <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
+    <p class="font-18"><strong>Who helped you complete your living will?</strong></p>
+    <%= f.text_field :person_helping %>
   </div>
   <br />
   <div class="actions">

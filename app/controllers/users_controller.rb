@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    @user.email = 'anonymous@email.com'
 
     respond_to do |format|
       if @user.save
@@ -33,7 +34,7 @@ class UsersController < ApplicationController
 
         # @result = Result.create(user_id: current_user.id)
 
-        format.html { redirect_to edit_user_path(@user), notice: 'User was successfully created.' }
+        format.html { redirect_to new_first_scenario_path, notice: 'User was successfully created.' }
         #format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -89,6 +90,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :quality_of_life)
+      params.require(:user).permit(:email, :password, :password_confirmation, :quality_of_life, :name, :date_completed, :person_helping)
     end
 end
