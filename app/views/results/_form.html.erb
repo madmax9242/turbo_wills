@@ -13,8 +13,14 @@
 
   <div class="spacer-10"></div>
 
+    <div class="field">
+    <p class="font-18"><strong>Did you review this living will with your surrogate or your MPOA?</strong></p>
+    <%= f.radio_button :review_with_mpoa, 'yes' %>Yes<br>
+    <%= f.radio_button :review_with_mpoa, 'no' %>No<br>
+  </div>
+
   <div class="field">
-    Do you have any comments?  If so, please write them below. <br>
+    <p class="font-18"><strong>Do you have any comments?  If so, please write them below. </strong></p>
     <%= f.text_area :comments %>
   </div>
   <div class="spacer-10"></div>
