@@ -14,7 +14,10 @@
   <div class="field">
     <p class="font-18"><strong>First and Last Name</strong></p>
     <%= f.text_field :name %>
-  </div><br />
+  </div>
+
+  <div class="spacer-10"></div>
+
   <!-- <div class="field">
     <p class="font-18"><strong>Email</strong></p>
     <%#= f.text_field :email %>
@@ -22,12 +25,44 @@
   <div class="field">
     <p class="font-18"><strong>Date Completed</strong></p>
     <%= f.date_field :date_completed %>
-  </div><br />
+  </div>
+  
+  <div class="spacer-10"></div>
+
   <div class="field">
     <p class="font-18"><strong>Who helped you complete your living will?</strong></p>
     <%= f.text_field :person_helping %>
   </div>
-  <br />
+  <div class="spacer-10"></div>
+
+  <div class="field">
+    Do you have a MPOA? <br>
+    <%= f.radio_button :mpoa, 'yes' %>Yes<br>
+    <%= f.radio_button :mpoa, 'no' %>No<br>
+  </div>
+  
+  <div class="spacer-10"></div>
+
+  <div class="field">
+    Who is your MPOA?
+    <%= f.text_field :mpoa_name %>
+  </div>
+
+  <div class="spacer-10"></div>
+
+  <div class="field">
+    I haven't named an MPOA but if I am hospitalized and require a health care surrogate this is who I would want as my surrogate. <br />
+    <%= f.text_field :surrogate %>
+  </div>
+
+  <div class="field">
+    Did you review this living will with your MPOA?<br>
+    <%= f.radio_button :review_with_mpoa, 'yes' %>Yes<br>
+    <%= f.radio_button :review_with_mpoa, 'no' %>No<br>
+  </div>
+
+  <div class="spacer-10"></div>
+
   <div class="actions">
     <%= submit_tag "Create User", class: "btn btn-large btn-success" %>
   </div>
